@@ -57,7 +57,7 @@ PLATFORM_HEADERS  = $(PLATFORM_HEADERS_DIR)/clint.h
 PLATFORM_HEADERS += $(PLATFORM_HEADERS_DIR)/rv_plic.h
 PLATFORM_HEADERS += $(PLATFORM_HEADERS_DIR)/occamy_soc_ctrl.h
 PLATFORM_HEADERS += $(PLATFORM_HEADERS_DIR)/snitch_cluster_peripheral.h
-PLATFORM_HEADERS += $(PLATFORM_HEADERS_DIR)/hemaia_d2d_link_peripheral.h
+#PLATFORM_HEADERS += $(PLATFORM_HEADERS_DIR)/hemaia_d2d_link_peripheral.h
 PLATFORM_HEADERS += $(PLATFORM_HEADERS_DIR)/hemaia_clk_rst_controller_peripheral.h
 # OCCAMYGEN headers
 PLATFORM_HEADERS += $(PLATFORM_HEADERS_DIR)/occamy_cfg.h
@@ -120,8 +120,8 @@ $(PLATFORM_HEADERS_DIR)/snitch_cluster_peripheral.h: $(SNITCH_ROOT)/hw/snitch_cl
 # HeMAiA D2D Link Ctrl #
 ########################
 
-$(PLATFORM_HEADERS_DIR)/hemaia_d2d_link_peripheral.h: $(shell bender path hemaia_d2d_link)/src/ctrl/hemaia_d2d_link_reg.hjson
-	$(call reggen_generate_header,$@,$<)
+# $(PLATFORM_HEADERS_DIR)/hemaia_d2d_link_peripheral.h: $(shell bender path hemaia_d2d_link)/src/ctrl/hemaia_d2d_link_reg.hjson
+# 	$(call reggen_generate_header,$@,$<)
 
 #######################
 # HeMAiA Clk Rst Ctrl #

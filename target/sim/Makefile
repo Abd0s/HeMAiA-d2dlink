@@ -208,7 +208,7 @@ clean-vlt: clean-work
 $(VSIM_BUILDDIR):
 	mkdir -p $@
 
-$(VSIM_BUILDDIR)/compile.vsim.tcl: testharness/testharness.sv  | $(VSIM_BUILDDIR)
+$(VSIM_BUILDDIR)/compile.vsim.tcl: $(VSIM_BUILDDIR)
 	$(BENDER) script vsim $(VSIM_BENDER) --vlog-arg="$(VLOG_FLAGS) -work $(dir $@) " > $@
 	echo '$(VLOG) -work $(dir $@) $(TB_CC_SOURCES) -vv -ccflags "$(TB_CC_FLAGS)"' >> $@
 	echo 'return 0' >> $@

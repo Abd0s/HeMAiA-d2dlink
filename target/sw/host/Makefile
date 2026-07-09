@@ -10,26 +10,25 @@
 
 # Host only applications
 APPS  = hello_world
-APPS += hemaia_clk_rst_configurator
-APPS += hemaia_system_xdma_copy
-# # Host + Device applications
-APPS += offload
-APPS += offload_bingo
-APPS += offload_bingo_ci
-APPS += offload_bingo_gemm_intra_chiplet_merge_load_and_compute
-APPS += offload_bingo_gemm_intra_chiplet_seperate_load_and_compute
-APPS += offload_bingo_gemm_multi_chiplet_vanilla
-APPS += offload_bingo_gemm_multi_chiplet_broadcast
-APPS += offload_bingo_stacked_gemm_intra_chiplet
-APPS += offload_bingo_tiled_gemm_intra_chiplet
-# # Host only applications
-APPS += hemaia_mailbox
-APPS += multichip_sync
-APPS += hemaia_d2d_link_configurator
-# # Host + Device applications
-APPS += offload_multichip
-APPS += offload_bingo_multichip
-APPS += offload_bingo_mempool_xdma
+APPS += hemaia_d2d_transfer
+# APPS += hemaia_clk_rst_configurator
+# APPS += hemaia_system_xdma_copy
+# # # Host + Device applications
+# APPS += offload
+# APPS += offload_bingo
+# APPS += offload_bingo_ci
+# APPS += offload_bingo_gemm_intra_chiplet_merge_load_and_compute
+# APPS += offload_bingo_gemm_intra_chiplet_seperate_load_and_compute
+# APPS += offload_bingo_gemm_multi_chiplet_vanilla
+# APPS += offload_bingo_gemm_multi_chiplet_broadcast
+# # # Host only applications
+# APPS += hemaia_mailbox
+# APPS += multichip_sync
+# APPS += hemaia_d2d_link_configurator
+# # # Host + Device applications
+# APPS += offload_multichip
+# APPS += offload_bingo_multichip
+# APPS += offload_bingo_mempool_xdma
 
 TARGET ?= all
 

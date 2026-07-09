@@ -7,3 +7,4 @@ overrides:
   common_cells:       { git: https://github.com/KULeuven-MICAS/common_cells.git,       rev    :  main  }
   register_interface: { git: https://github.com/pulp-platform/register_interface.git,  version:  0.4.2 }
   tech_cells_generic: { git: https://github.com/KULeuven-MICAS/tech_cells_generic.git, rev    : master }
+  hemaia_d2d_link:    { git: git@github.com:IveanEx/hemaia_d2d_link_for_student.git,   rev    : main   }
