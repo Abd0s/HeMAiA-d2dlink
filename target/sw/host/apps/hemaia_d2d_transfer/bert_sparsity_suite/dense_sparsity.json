@@ -1,0 +1,21 @@
+{
+  "source": "outputs\\bert_sparsity_suite\\dense.c",
+  "symbol": "data",
+  "dtype": "float32",
+  "byte_count": 8192,
+  "weight_count": 2048,
+  "zero_threshold": 0.0,
+  "zero_weights": 0,
+  "nonzero_weights": 2048,
+  "sparsity": 0.0,
+  "zero_byte_count": 35,
+  "zero_byte_fraction": 0.0042724609375,
+  "zero_run_count": 0,
+  "mean_zero_run_weights": 0.0,
+  "longest_zero_run_weights": 0,
+  "complete_1x4_blocks": 512,
+  "all_zero_1x4_blocks": 0,
+  "all_zero_1x4_block_fraction": 0.0,
+  "nan_weights": 0,
+  "inf_weights": 0
+}

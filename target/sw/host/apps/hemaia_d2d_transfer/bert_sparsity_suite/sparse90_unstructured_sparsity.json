@@ -1,0 +1,21 @@
+{
+  "source": "outputs\\bert_sparsity_suite\\sparse90_unstructured.c",
+  "symbol": "data",
+  "dtype": "float32",
+  "byte_count": 8192,
+  "weight_count": 2048,
+  "zero_threshold": 0.0,
+  "zero_weights": 1910,
+  "nonzero_weights": 138,
+  "sparsity": 0.9326171875,
+  "zero_byte_count": 6699,
+  "zero_byte_fraction": 0.8177490234375,
+  "zero_run_count": 131,
+  "mean_zero_run_weights": 14.580152671755725,
+  "longest_zero_run_weights": 79,
+  "complete_1x4_blocks": 512,
+  "all_zero_1x4_blocks": 390,
+  "all_zero_1x4_block_fraction": 0.76171875,
+  "nan_weights": 0,
+  "inf_weights": 0
+}

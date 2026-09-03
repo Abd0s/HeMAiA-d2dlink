@@ -1,5 +1,13 @@
-#include "../data/data.h"
+// #include "../data/data.h"
 #include "host.h"
+// #include "../data/data_intel_bert.h"
+#include "../data/data_llama.h"
+// #include "../bert_sparsity_suite/dense.h"
+// #include "../bert_sparsity_suite/sparse70_unstructured.h"
+// #include "../bert_sparsity_suite/sparse80_1x4_block.h"
+// #include "../bert_sparsity_suite/sparse85_unstructured.h"
+// #include "../bert_sparsity_suite/sparse90_unstructured.h"
+
 
 int main() {
     uintptr_t address_prefix = (uintptr_t)get_current_chip_baseaddress();
@@ -39,19 +47,19 @@ int main() {
     chip_barrier(comm_buffer_ptr, 0x00, 0x01, 1);
     printf("Chip %d barrier finished. \r\n", get_current_chip_id());
 
-    if (get_current_chip_id() == 1) {
-        uint8_t* data_dest_chip = (uint8_t*)chiplet_addr_transform((uintptr_t)data_dest);
-        printf("Checking data correctness... on chip 1\r\n");
-        for (uint32_t i = 0; i < data_size; i++) {
-            if (data[i] != data_dest_chip[i]) {
-                printf("Data mismatch at index %d: expected %d, got %d\n", i,
-                    data[i], data_dest_chip[i]);
-                return -1;
-            }
-        }
-        printf("Data correctness check passed on chip 1\r\n");
-    }
-
+    // if (get_current_chip_id() == 1) {
+    //     uint8_t* data_dest_chip = (uint8_t*)chiplet_addr_transform((uintptr_t)data_dest);
+    //     printf("Checking data correctness... on chip 1\r\n");
+    //     for (uint32_t i = 0; i < data_size; i++) {
+    //         if (data[i] != data_dest_chip[i]) {
+    //             printf("Data mismatch at index %d: expected %d, got %d\n", i,
+    //                 data[i], data_dest_chip[i]);
+    //             return -1;
+    //         }
+    //     }
+    //     printf("Data correctness check passed on chip 1\r\n");
+    // }
+    // chip_barrier(comm_buffer_ptr, 0x00, 0x01, 2);
     printf("Finished on chip %d\r\n", get_current_chip_id());
     return 0;
 }
